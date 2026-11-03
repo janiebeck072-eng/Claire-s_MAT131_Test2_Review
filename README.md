@@ -21,3 +21,7 @@ You can also open `index.html` locally. No build system, server, account, or ext
 Progress is stored in the browser's `localStorage`; use Export/Import to transfer progress to another device. Retaking the diagnostic clears prior practice and final scores. Scores are raw practice scores, not official course-grade predictions.
 
 The graph-based questions use a **new original graph of f′(x)=x²−4**, not a reproduction of an unspecified textbook graph. Source handouts inform the topics and example contexts; the review questions are original.
+
+
+## Updated presentation
+Questions now use clearer spacing, mathematical superscripts and stacked simple fractions. Each of the 10 practice modules includes a fully worked, numbered example with detailed algebra and a concluding explanation. Guided example equations use MathJax loaded from a CDN (internet required for that enhanced rendering); the rest of the activity works as static files. Existing browser progress remains compatible.

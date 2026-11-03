@@ -5,70 +5,398 @@ window.MA131={
       "name": "Critical Numbers",
       "domain": "Shape of Graph",
       "tip": "Differentiate, solve f′(x)=0, and check where f′ is undefined but f exists.",
-      "example": "For f(x)=3x⁴+12x³, f′(x)=12x²(x+3), so critical numbers are −3 and 0."
+      "example": "For f(x)=3x⁴+12x³, f′(x)=12x²(x+3), so critical numbers are −3 and 0.",
+      "worked": {
+        "title": "Find all critical numbers of $f(x)=3x^4+12x^3$.",
+        "steps": [
+          {
+            "label": "Differentiate each term",
+            "latex": "f\\prime(x)=12x^3+36x^2"
+          },
+          {
+            "label": "Factor the derivative",
+            "latex": "f\\prime(x)=12x^2(x+3)"
+          },
+          {
+            "label": "Set the derivative equal to zero",
+            "latex": "12x^2(x+3)=0"
+          },
+          {
+            "label": "Use the zero-product property",
+            "latex": "x^2=0\\ \\text{or}\\ x+3=0"
+          },
+          {
+            "label": "Check the domain and report",
+            "latex": "\\boxed{x=0\\ \\text{and}\\ x=-3}"
+          }
+        ],
+        "note": "Both values are in the polynomial’s domain. A critical number does not automatically mean an extremum."
+      }
     },
     {
       "id": "monotonic",
       "name": "Increasing & Decreasing",
       "domain": "Shape of Graph",
       "tip": "Make a sign chart for f′ on intervals separated by critical numbers and domain breaks.",
-      "example": "For f′(x)=3(x−2)(x+1), signs are +, −, + across −1 and 2."
+      "example": "For f′(x)=3(x−2)(x+1), signs are +, −, + across −1 and 2.",
+      "worked": {
+        "title": "Determine where $f(x)=3x^4+12x^3$ increases and decreases.",
+        "steps": [
+          {
+            "label": "Differentiate and factor",
+            "latex": "f\\prime(x)=12x^2(x+3)"
+          },
+          {
+            "label": "Find the dividing values",
+            "latex": "x=-3,\\ 0"
+          },
+          {
+            "label": "Test a value to the left of −3",
+            "latex": "f\\prime(-4)=12(16)(-1)<0"
+          },
+          {
+            "label": "Test a value between −3 and 0",
+            "latex": "f\\prime(-1)=12(1)(2)>0"
+          },
+          {
+            "label": "Test a value to the right of 0",
+            "latex": "f\\prime(1)=12(1)(4)>0"
+          },
+          {
+            "label": "State the intervals",
+            "latex": "\\boxed{\\text{Decreasing: }(-\\infty,-3)}\\\\\\boxed{\\text{Increasing: }(-3,\\infty)}"
+          }
+        ],
+        "note": "The derivative stays positive through 0; a zero derivative does not necessarily reverse the direction."
+      }
     },
     {
       "id": "extrema",
       "name": "Relative Extrema",
       "domain": "Shape of Graph",
       "tip": "An f′ change +→− gives a local maximum; −→+ gives a local minimum.",
-      "example": "For f′(x)=(x−1)(x+1), x=−1 is a maximum and x=1 is a minimum."
+      "example": "For f′(x)=(x−1)(x+1), x=−1 is a maximum and x=1 is a minimum.",
+      "worked": {
+        "title": "Find relative extrema of $f(x)=3x^4+12x^3$.",
+        "steps": [
+          {
+            "label": "Factor the first derivative",
+            "latex": "f\\prime(x)=12x^2(x+3)"
+          },
+          {
+            "label": "Locate critical numbers",
+            "latex": "x=-3,\\ 0"
+          },
+          {
+            "label": "Check derivative signs around −3",
+            "latex": "(-\\infty,-3): -\\quad (-3,0): +"
+          },
+          {
+            "label": "Classify the change",
+            "latex": "-\\ \\longrightarrow\\ +\\ \\Rightarrow\\ \\text{relative minimum at }x=-3"
+          },
+          {
+            "label": "Calculate the function value",
+            "latex": "f(-3)=3(81)+12(-27)=-81"
+          },
+          {
+            "label": "Check the other critical number",
+            "latex": "f\\prime\\text{ is positive on both sides of }0"
+          },
+          {
+            "label": "Give the final answer",
+            "latex": "\\boxed{\\text{Relative minimum }(-3,-81)}"
+          }
+        ],
+        "note": "There is no relative maximum, and x = 0 is not an extremum."
+      }
     },
     {
       "id": "concavity",
       "name": "Concavity",
       "domain": "Shape of Graph",
       "tip": "Use f″: positive means concave up; negative means concave down.",
-      "example": "If f″(x)=6x, the graph is concave down for x<0 and up for x>0."
+      "example": "If f″(x)=6x, the graph is concave down for x<0 and up for x>0.",
+      "worked": {
+        "title": "Find concavity intervals of $f(x)=3x^4+12x^3$.",
+        "steps": [
+          {
+            "label": "Differentiate once",
+            "latex": "f\\prime(x)=12x^3+36x^2"
+          },
+          {
+            "label": "Differentiate again",
+            "latex": "f\\prime\\prime(x)=36x^2+72x=36x(x+2)"
+          },
+          {
+            "label": "Find possible concavity changes",
+            "latex": "36x(x+2)=0\\Rightarrow x=-2,0"
+          },
+          {
+            "label": "Test x = −3",
+            "latex": "f\\prime\\prime(-3)=36(-3)(-1)>0"
+          },
+          {
+            "label": "Test x = −1",
+            "latex": "f\\prime\\prime(-1)=36(-1)(1)<0"
+          },
+          {
+            "label": "Test x = 1",
+            "latex": "f\\prime\\prime(1)=36(1)(3)>0"
+          },
+          {
+            "label": "State the intervals",
+            "latex": "\\boxed{\\text{Up: }(-\\infty,-2)\\cup(0,\\infty)}\\\\\\boxed{\\text{Down: }(-2,0)}"
+          }
+        ],
+        "note": "Positive second derivative means concave up; negative means concave down."
+      }
     },
     {
       "id": "inflection",
       "name": "Inflection Points",
       "domain": "Shape of Graph",
       "tip": "Check for a change in concavity and ensure the point is in the function domain.",
-      "example": "For f(x)=x³, f″(x)=6x changes sign at 0, giving inflection point (0,0)."
+      "example": "For f(x)=x³, f″(x)=6x changes sign at 0, giving inflection point (0,0).",
+      "worked": {
+        "title": "Find inflection points of $f(x)=3x^4+12x^3$.",
+        "steps": [
+          {
+            "label": "Find the second derivative",
+            "latex": "f\\prime\\prime(x)=36x(x+2)"
+          },
+          {
+            "label": "Find candidates",
+            "latex": "f\\prime\\prime(x)=0\\Rightarrow x=-2,0"
+          },
+          {
+            "label": "Check signs in the three intervals",
+            "latex": "(+),\\ (-),\\ (+)"
+          },
+          {
+            "label": "Confirm changes in concavity",
+            "latex": "\\text{Both }-2\\text{ and }0\\text{ change sign}"
+          },
+          {
+            "label": "Calculate the y-coordinate at −2",
+            "latex": "f(-2)=3(16)+12(-8)=-48"
+          },
+          {
+            "label": "Calculate the y-coordinate at 0",
+            "latex": "f(0)=0"
+          },
+          {
+            "label": "Report coordinates",
+            "latex": "\\boxed{(-2,-48)\\ \\text{and}\\ (0,0)}"
+          }
+        ],
+        "note": "A point where the second derivative is zero is only a candidate; a sign change is essential."
+      }
     },
     {
       "id": "derivgraph",
       "name": "Reading Graphs of f′",
       "domain": "Shape of Graph",
       "tip": "f increases where f′>0. f is concave up where f′ increases. Extrema occur where f′ changes sign.",
-      "example": "If f′ is an upward parabola crossing at −2 and 2, f increases outside the roots and decreases between them."
+      "example": "If f′ is an upward parabola crossing at −2 and 2, f increases outside the roots and decreases between them.",
+      "worked": {
+        "title": "Use the graph of $f\\prime(x)=x^2-4$ to describe $f$.",
+        "steps": [
+          {
+            "label": "Find where the derivative crosses the x-axis",
+            "latex": "x^2-4=0\\Rightarrow x=-2,2"
+          },
+          {
+            "label": "Read the sign of the derivative",
+            "latex": "f\\prime>0\\text{ for }x<-2\\text{ or }x>2"
+          },
+          {
+            "label": "Read the negative region",
+            "latex": "f\\prime<0\\text{ for }-2<x<2"
+          },
+          {
+            "label": "Classify extrema by sign changes",
+            "latex": "+\\to-\\text{ at }-2\\Rightarrow\\text{ maximum}\\\\-\\to+\\text{ at }2\\Rightarrow\\text{ minimum}"
+          },
+          {
+            "label": "Read concavity from the slope of the derivative graph",
+            "latex": "f\\prime\\text{ falls on }(-\\infty,0)\\text{ and rises on }(0,\\infty)"
+          },
+          {
+            "label": "Identify the inflection x-coordinate",
+            "latex": "\\boxed{x=0}"
+          }
+        ],
+        "note": "The graph shows locations of extrema of f, but not their y-values unless additional information about f is given."
+      }
     },
     {
       "id": "second",
       "name": "Second Derivative Test",
       "domain": "Optimization",
       "tip": "At a critical number c, f″(c)>0 indicates a relative minimum and f″(c)<0 a relative maximum. Zero is inconclusive.",
-      "example": "For f(x)=x², f′(0)=0 and f″(0)=2>0, so (0,0) is a relative minimum."
+      "example": "For f(x)=x², f′(0)=0 and f″(0)=2>0, so (0,0) is a relative minimum.",
+      "worked": {
+        "title": "Use the second derivative test for $f(x)=\frac{100}{x}+4x$.",
+        "steps": [
+          {
+            "label": "State the domain",
+            "latex": "x\\ne0"
+          },
+          {
+            "label": "Differentiate",
+            "latex": "f\\prime(x)=-\\frac{100}{x^2}+4"
+          },
+          {
+            "label": "Solve for critical numbers",
+            "latex": "-\\frac{100}{x^2}+4=0\\Rightarrow x^2=25"
+          },
+          {
+            "label": "Identify candidates",
+            "latex": "x=-5,5"
+          },
+          {
+            "label": "Differentiate again",
+            "latex": "f\\prime\\prime(x)=\\frac{200}{x^3}"
+          },
+          {
+            "label": "Evaluate at −5",
+            "latex": "f\\prime\\prime(-5)=\\frac{200}{-125}<0\\Rightarrow\\text{relative maximum}"
+          },
+          {
+            "label": "Evaluate at 5",
+            "latex": "f\\prime\\prime(5)=\\frac{200}{125}>0\\Rightarrow\\text{relative minimum}"
+          },
+          {
+            "label": "Compute coordinates",
+            "latex": "f(-5)=-40,\\quad f(5)=40"
+          }
+        ],
+        "note": "The second derivative test classifies local extrema. Global extrema require separate domain analysis."
+      }
     },
     {
       "id": "absolute",
       "name": "Absolute Extrema & Domains",
       "domain": "Optimization",
       "tip": "Consider the entire domain, boundaries, and end behavior; local tests alone do not establish global extrema.",
-      "example": "For 100/x+4x on (0,∞), the unique minimum is at x=5; the function has no maximum."
+      "example": "For 100/x+4x on (0,∞), the unique minimum is at x=5; the function has no maximum.",
+      "worked": {
+        "title": "Determine absolute extrema of $f(x)=\\frac{100}{x}+4x$ on $(0,\\infty)$.",
+        "steps": [
+          {
+            "label": "Find the derivative",
+            "latex": "f\\prime(x)=4-\\frac{100}{x^2}"
+          },
+          {
+            "label": "Solve the critical-point equation",
+            "latex": "4=\\frac{100}{x^2}\\Rightarrow x^2=25"
+          },
+          {
+            "label": "Apply the domain restriction",
+            "latex": "x=5\\quad (x>0)"
+          },
+          {
+            "label": "Verify the local classification",
+            "latex": "f\\prime\\prime(5)=\\frac{200}{125}>0"
+          },
+          {
+            "label": "Check behavior near the left boundary",
+            "latex": "\\lim_{x\\to0^+}f(x)=+\\infty"
+          },
+          {
+            "label": "Check behavior toward the right",
+            "latex": "\\lim_{x\\to\\infty}f(x)=+\\infty"
+          },
+          {
+            "label": "Compute and classify the global result",
+            "latex": "\\boxed{f(5)=40\\text{ is the absolute minimum}}"
+          }
+        ],
+        "note": "There is no absolute maximum on (0, ∞). On the full punctured domain, the function is unbounded above and below."
+      }
     },
     {
       "id": "model",
       "name": "Objectives & Constraints",
       "domain": "Optimization",
       "tip": "Write the quantity to optimize and use the constraint to eliminate a variable before differentiating.",
-      "example": "For three fenced sides totaling 40 ft, 2w+L=40 and A(w)=w(40−2w)."
+      "example": "For three fenced sides totaling 40 ft, 2w+L=40 and A(w)=w(40−2w).",
+      "worked": {
+        "title": "Set up the objective for a garden with 40 feet of fencing on three sides.",
+        "steps": [
+          {
+            "label": "Draw and label the dimensions",
+            "latex": "\\text{Width }w,\\quad\\text{length }L"
+          },
+          {
+            "label": "Write the fencing constraint",
+            "latex": "2w+L=40"
+          },
+          {
+            "label": "Isolate one variable",
+            "latex": "L=40-2w"
+          },
+          {
+            "label": "Write the area objective",
+            "latex": "A=wL"
+          },
+          {
+            "label": "Substitute the constraint",
+            "latex": "A(w)=w(40-2w)"
+          },
+          {
+            "label": "Simplify and restrict the domain",
+            "latex": "\\boxed{A(w)=40w-2w^2},\\quad0<w<20"
+          }
+        ],
+        "note": "The objective is what you optimize; the constraint connects the variables. One-variable form makes differentiation possible."
+      }
     },
     {
       "id": "applications",
       "name": "Optimization Applications",
       "domain": "Optimization",
       "tip": "Define variables, form a one-variable objective, differentiate, verify global optimality, and state units.",
-      "example": "For the 40-ft garden, A(w)=40w−2w² has a maximum at w=10, L=20."
+      "example": "For the 40-ft garden, A(w)=40w−2w² has a maximum at w=10, L=20.",
+      "worked": {
+        "title": "Find the garden dimensions that maximize area using 40 feet of fencing.",
+        "steps": [
+          {
+            "label": "Define width and length",
+            "latex": "w>0,\\quad L>0"
+          },
+          {
+            "label": "Use the three-side fencing constraint",
+            "latex": "2w+L=40\\Rightarrow L=40-2w"
+          },
+          {
+            "label": "Form the area function",
+            "latex": "A(w)=w(40-2w)=40w-2w^2"
+          },
+          {
+            "label": "Differentiate",
+            "latex": "A\\prime(w)=40-4w"
+          },
+          {
+            "label": "Set the derivative equal to zero",
+            "latex": "40-4w=0\\Rightarrow w=10"
+          },
+          {
+            "label": "Verify the maximum",
+            "latex": "A\\prime\\prime(w)=-4<0"
+          },
+          {
+            "label": "Find the other dimension",
+            "latex": "L=40-2(10)=20"
+          },
+          {
+            "label": "Find the area and state units",
+            "latex": "\\boxed{w=10\\text{ ft},\\ L=20\\text{ ft},\\ A=200\\text{ ft}^2}"
+          }
+        ],
+        "note": "Because area approaches 0 at either end of the feasible interval and the quadratic is concave down, this is the absolute maximum."
+      }
     }
   ],
   "diagnostic": [
